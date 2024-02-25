@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://thymeleaf.org">
 	<head>
 		<title>Mars Rover Api</title>
 	</head>
@@ -7,5 +7,7 @@
 		<h2>
 			Welcome to my App!
 		</h2>
+		<div th:text=${name}></div>
+		<div th:text=${address}></div>
 	</body>
 </html>
