@@ -1,4 +1,4 @@
-package com.alicenjf;
+package com.alicenjf.response;
 
 public class MarsPhoto {
 	private Long id;

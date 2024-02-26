@@ -1,4 +1,4 @@
-package com.alicenjf;
+package com.alicenjf.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
