@@ -1,10 +1,17 @@
 package com.alicenjf.response;
 
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class MarsPhoto {
 	private Long id;
 	private int sol;
 	private MarsCamera cameras;
+	@JsonProperty("img_src")
 	private String imgSrc;
+	@JsonProperty("earth_date")
+	private String earthDate;
+	private MarsRover rover;
 	
 	public Long getId() {
 		return id;
@@ -33,6 +40,12 @@ public class MarsPhoto {
 	@Override
 	public String toString() {
 		return "MarsPhoto [id=" + id + ", sol=" + sol + ", cameras=" + cameras + ", imgSrc=" + imgSrc + "]";
+	}
+	public MarsRover getRover() {
+		return rover;
+	}
+	public void setRover(MarsRover rover) {
+		this.rover = rover;
 	}
 	
 }
