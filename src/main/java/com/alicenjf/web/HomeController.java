@@ -1,16 +1,23 @@
 package com.alicenjf.web;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.alicenjf.response.MarsRoverApiResponse;
+import com.alicenjf.service.MarsRoverApiService;
+
 @Controller
 public class HomeController {
-
+	@Autowired
+	private MarsRoverApiService roverService;
+	
 	@GetMapping("/")
 	public String getHomeView(ModelMap model) {
-		model.put("name", "Alice");
-		model.put("address", "1234 FakeAddrees st.");
+		//MarsRoverApiService roverData = new MarsRoverApiService();
+		MarsRoverApiResponse roverData = roverService.getRoverData();
+		model.put("roverData", roverData);
 		return "index";
 	}
 	

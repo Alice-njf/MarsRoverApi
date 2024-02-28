@@ -2,12 +2,30 @@
 <html xmlns:th="http://thymeleaf.org">
 	<head>
 		<title>Mars Rover Api</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
 	</head>
 	<body>
 		<h2>
 			Welcome to my App!
 		</h2>
-		<div th:text=${name}></div>
-		<div th:text=${address}></div>
+		<!--<img th:each="photo : ${roverData.photos}" th:src="${photo.imgSrc}">
+		<div th:text=${roverData}></div> -->
+		
+		<div class="container">
+		  <div th:each="int i = 0 ; i< ${roverData.photos.size()} ; i+ 4" class="row">
+		    <div class="col-sm">
+		      <img th:src="${roverData.photos[i].imgSrc}" class="img-fluid"/>
+		    </div>
+		    <div class="col-sm">
+		      <img th:src="${roverData.photos[i+1].imgSrc}" class="img-fluid"/>
+		    </div>
+		    <div class="col-sm">
+		      <img th:src="${roverData.photos[i+2].imgSrc}" class="img-fluid"/>
+		    </div>
+		    <div class="col-sm">
+		      <img th:src="${roverData.photos[i+3].imgSrc}" class="img-fluid"/>
+		    </div>		    
+		  </div>
+		</div>
 	</body>
 </html>
