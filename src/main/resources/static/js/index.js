@@ -1,1 +1,8 @@
-document.getElementById('curiosity').addEventListener('click', function(){alert('curiosity was clicked')});
+document.querySelectorAll("label").forEach(
+	function(label){
+		label.addEventListener('click', function(){
+			alert('a button was clicked')
+			}
+		)
+	}
+);
