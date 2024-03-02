@@ -11,9 +11,12 @@
 		</h2>
 		<!--<img th:each="photo : ${roverData.photos}" th:src="${photo.imgSrc}">
 		<div th:text=${roverData}></div> -->
-		<form method="post" action="">
-			<input type="hidden" id="marsApiRoverData" name="marsApiRoverData" value="">
-			<div class="container" style="display: flex; align-items: center; justify-content: center; " >
+		
+		<div class="container" style="display: flex; align-items: center; justify-content: center; " >
+			
+			
+			<form method="post" action="" id="frmRoverType">
+				<input type="hidden" id="marsApiRoverData" name="marsApiRoverData" value=""/>
 				<div class="btn-group" role="group" aria-label="Basic radio toggle button group" id="buttons">
 				  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
 				  <label class="btn btn-outline-danger" for="btnradio1" id="marsApiCuriosity">Curiosity</label>
@@ -24,8 +27,9 @@
 				  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
 				  <label class="btn btn-outline-danger" for="btnradio3" id="marsApiSpirit">Spirit</label>
 				</div>
-			</div> 
-		</form>
+		 	</form>
+		 </div> 
+		
 		<div class="container">
 		  <div th:each="index: ${#numbers.sequence(0,roverData.photos.size() - 1,4)} " class="row" style="margin: 1.5em;">
 		    <div class="col-sm" th:if="${index < roverData.photos.size()}">
