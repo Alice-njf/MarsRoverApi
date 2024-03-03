@@ -7,8 +7,29 @@ document.querySelectorAll("label[id*='marsApi'").forEach(
 			let apiData = document.getElementById('marsApiRoverData');
 			apiData.value = roverId;
 			document.getElementById("frmRoverType").submit();
-			document.getElementById('marsApi'+roverId).class = "btn btn-outline-dark";
 			}
 		)
 	}
 );
+
+function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
+
+const marsRoverType = getUrlParameter("marsApiRoverData");
+console.log(marsRoverType);
+if (marsRoverType == "Curiosity") {
+	document.getElementById('marsApiCuriosity').classList.remove('btn-outline-danger');
+}  else if (marsRoverType == "Opportunity") {
+	document.getElementById('marsApiOpportunity').classList.remove('btn-outline-danger');
+
+}  else if (marsRoverType == "Sprit") {
+	document.getElementById('marsApiSprit').classList.remove('btn-outline-danger');
+} else {
+	
+}
+
+
