@@ -7,6 +7,7 @@ document.querySelectorAll("label[id*='marsApi'").forEach(
 			let apiData = document.getElementById('marsApiRoverData');
 			apiData.value = roverId;
 			document.getElementById("frmRoverType").submit();
+			document.getElementById('marsApi'+roverId).class = "btn btn-outline-dark";
 			}
 		)
 	}
