@@ -19,17 +19,15 @@ function getUrlParameter(name) {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
-const marsRoverType = getUrlParameter("marsApiRoverData");
+let marsRoverType = getUrlParameter("marsApiRoverData");
+
+highlightBtnRoverType (marsRoverType);
 console.log(marsRoverType);
-if (marsRoverType == "Curiosity") {
-	document.getElementById('marsApiCuriosity').classList.remove('btn-outline-danger');
-}  else if (marsRoverType == "Opportunity") {
-	document.getElementById('marsApiOpportunity').classList.remove('btn-outline-danger');
 
-}  else if (marsRoverType == "Sprit") {
-	document.getElementById('marsApiSprit').classList.remove('btn-outline-danger');
-} else {
-	
+function highlightBtnRoverType(roverType){
+	if (marsRoverType == '')
+		marsRoverType == 'Opportunity';
+	document.getElementById('marsApi' + roverType).classList.remove('btn-outline-danger');
+	document.getElementById('marsApi' + roverType).classList.add('btn-dark');
+
 }
-
-
