@@ -4,7 +4,7 @@ package com.alicenjf.dto;
 public class HomeDto {
 	private String marsApiRoverData;
 	private Integer marsSol;
-	private Boolean chekBox;
+	private Boolean flexCheckDefault;
 	public String getMarsApiRoverData() {
 		return marsApiRoverData;
 	}
@@ -17,11 +17,11 @@ public class HomeDto {
 	public void setMarsSol(Integer marsSol) {
 		this.marsSol = marsSol;
 	}
-	public Boolean getChekBox() {
-		return chekBox;
+	public Boolean getFlexCheckDefault() {
+		return flexCheckDefault;
 	}
-	public void setChekBox(Boolean chekBox) {
-		this.chekBox = chekBox;
+	public void setFlexCheckDefault(Boolean chekBox) {
+		this.flexCheckDefault = chekBox;
 	}
 	
 }

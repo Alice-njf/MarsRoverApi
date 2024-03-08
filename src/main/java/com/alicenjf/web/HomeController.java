@@ -29,6 +29,8 @@ public class HomeController {
 		}
 		MarsRoverApiResponse roverData = roverService.getRoverData(homeDto.getMarsApiRoverData(), homeDto.getMarsSol());
 		model.put("roverData", roverData);
+		model.put("homeDto", homeDto);
+		
 		return "index";
 	}
 	
@@ -36,6 +38,7 @@ public class HomeController {
 	public String getTest(ModelMap model) {
 		model.put("name", "Test");
 		model.put("address", "Test Adrress");
+		
 		return "index";
 	}
 	
