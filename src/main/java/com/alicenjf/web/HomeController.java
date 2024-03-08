@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.thymeleaf.util.StringUtils;
 
+import com.alicenjf.dto.HomeDto;
 import com.alicenjf.response.MarsRoverApiResponse;
 import com.alicenjf.service.MarsRoverApiService;
 
@@ -16,19 +17,17 @@ public class HomeController {
 	private MarsRoverApiService roverService;
 	
 	@GetMapping("/")
-	public String getHomeView(ModelMap model, 
-			@RequestParam (required = false) String marsApiRoverData,
-			@RequestParam (required = false) Integer marsSol) {
+	public String getHomeView(ModelMap model, HomeDto homeDto) {
 		// Testing before Auto wired : MarsRoverApiService roverData = new MarsRoverApiService();
 		
-		if (StringUtils.isEmpty(marsApiRoverData) ) {
-			marsApiRoverData = "Opportunity";
+		if (StringUtils.isEmpty(homeDto.getMarsApiRoverData()) ) {
+			homeDto.setMarsApiRoverData("Opportunity");
 		}
 		
-		if (marsSol == null) {
-			marsSol = 1;
+		if (homeDto.getMarsSol() == null) {
+			homeDto.setMarsSol(1);
 		}
-		MarsRoverApiResponse roverData = roverService.getRoverData(marsApiRoverData, marsSol);
+		MarsRoverApiResponse roverData = roverService.getRoverData(homeDto.getMarsApiRoverData(), homeDto.getMarsSol());
 		model.put("roverData", roverData);
 		return "index";
 	}

@@ -1,11 +1,10 @@
 package com.alicenjf.dto;
 
-import org.springframework.web.bind.annotation.RequestParam;
 
 public class HomeDto {
-	String marsApiRoverData;
-	Integer marsSol;
-	Boolean chekBox;
+	private String marsApiRoverData;
+	private Integer marsSol;
+	private Boolean chekBox;
 	public String getMarsApiRoverData() {
 		return marsApiRoverData;
 	}
