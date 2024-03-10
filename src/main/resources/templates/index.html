@@ -46,7 +46,7 @@
 				</div>
 		 	
 		 	</form>
-		 </div> 
+		 </div>  
 		<div class="container">
 		  <div th:each="index: ${#numbers.sequence(0,roverData.photos.size() - 1,4)} " class="row" style="margin: 1.5em;">
 		    <div class="col-sm" th:if="${index < roverData.photos.size()}">
