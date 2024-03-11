@@ -1,5 +1,8 @@
 package com.alicenjf.web;
 
+import java.util.ArrayList;
+
+import org.hibernate.mapping.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -27,6 +30,8 @@ public class HomeController {
 		if (homeDto.getMarsSol() == null) {
 			homeDto.setMarsSol(1);
 		}
+		
+
 		MarsRoverApiResponse roverData = roverService.getRoverData(homeDto.getMarsApiRoverData(), homeDto.getMarsSol());
 		model.put("roverData", roverData);
 		model.put("homeDto", homeDto);
