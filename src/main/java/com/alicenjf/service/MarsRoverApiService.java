@@ -12,7 +12,7 @@ import com.alicenjf.dto.HomeDto;
 import com.alicenjf.response.MarsPhoto;
 import com.alicenjf.response.MarsRoverApiResponse;
 @Service
-public class MarsRoverApiService {
+public class MarsRoverApiService { 
 	
 	private static final String API_KEY = "XwxaIQ3keTPNpWHwMWAcQ2eA6zOQEAd8WyUC2hvN";
 	
