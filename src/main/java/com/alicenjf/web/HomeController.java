@@ -1,5 +1,6 @@
 package com.alicenjf.web;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 
 import org.hibernate.mapping.List;
@@ -20,7 +21,7 @@ public class HomeController {
 	private MarsRoverApiService roverService;
 	
 	@GetMapping("/")
-	public String getHomeView(ModelMap model, HomeDto homeDto) {
+	public String getHomeView(ModelMap model, HomeDto homeDto) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		// Testing before Auto wired : MarsRoverApiService roverData = new MarsRoverApiService();
 		
 		if (StringUtils.isEmpty(homeDto.getMarsApiRoverData()) ) {
