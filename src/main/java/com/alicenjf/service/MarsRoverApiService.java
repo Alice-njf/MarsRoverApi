@@ -26,7 +26,7 @@ public class MarsRoverApiService {
 	public MarsRoverApiService() {
 		validCameras.put("Opportunity", Arrays.asList("FHAZ","RHAZ", "NAVCAM", "PANCAM", "MINITES"));
 		validCameras.put("Curiosity", Arrays.asList("FHAZ","RHAZ","MAST","CHEMCAM","MAHLI","MARDI","NAVCAM"));
-		validCameras.put("Sprit", Arrays.asList("FHAZ","RHAZ","NAVCAM","PANCAM","MINITES"));
+		validCameras.put("Spirit", Arrays.asList("FHAZ","RHAZ","NAVCAM","PANCAM","MINITES"));
 	}
 	
 	public MarsRoverApiResponse getRoverData(HomeDto homeDto) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
@@ -41,6 +41,7 @@ public class MarsRoverApiService {
 				photos.addAll(apiResponse.getPhotos());
 				}
 			);
+		System.out.println("A car with " + photos + " wheels has been created.");
 		response.setPhotos(photos);
 		//ResponseEntity<MarsRoverApiResponse> response = rt.getForEntity("https://api.nasa.gov/mars-photos/api/v1/rovers/"+homeDto.getMarsApiRoverData()+"/photos?sol=" + homeDto.getMarsSol() + "&api_key=" + API_KEY, MarsRoverApiResponse.class);
 		return response;

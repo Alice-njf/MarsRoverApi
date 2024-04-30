@@ -50,7 +50,7 @@
 				</div>
 				<div class="col-xs-12 col-sm-12 col-md-4">
 					<div class="form-check">
-						<input class="form-check-input" type="checkbox" th:field="${homeDto.cameraFhaz}" th:attr="disabled=${!#lists.contains(validCameras, 'FHAZ') ? 'disabled' : 'false'}">
+						<input class="form-check-input" type="checkbox" th:field="${homeDto.cameraFhaz}" >
 						<label class="form-check-label" for="cameraFhaz1">
 							Front Hazard Avoidance Camera
 						</label>
