@@ -27,7 +27,7 @@ public class MarsRoverApiService {
 		validCameras.put("Opportunity", Arrays.asList("FHAZ","RHAZ", "NAVCAM", "PANCAM", "MINITES"));
 		validCameras.put("Curiosity", Arrays.asList("FHAZ","RHAZ","MAST","CHEMCAM","MAHLI","MARDI","NAVCAM"));
 		validCameras.put("Spirit", Arrays.asList("FHAZ","RHAZ","NAVCAM","PANCAM","MINITES"));
-	}
+	} 
 	
 	public MarsRoverApiResponse getRoverData(HomeDto homeDto) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		RestTemplate rt = new RestTemplate();

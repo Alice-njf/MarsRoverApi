@@ -12,6 +12,7 @@ document.querySelectorAll("label[id*='marsApi'").forEach(
 	}
 );
 
+
 function getUrlParameter(name) {
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
