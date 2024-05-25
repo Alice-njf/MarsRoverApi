@@ -37,7 +37,16 @@
 				<label for="marsSol" style="margin-top: 1em;">Mars Sol: </label>
 				<input class="form-control" type="number" th:field="${homeDto.marsSol}" />
 			</div>
-			<button type="submit" class="btn btn-outline-danger" style="margin-top: 0.5em;">submit</button>
+			
+			<div class="row">
+				<div class="col-3 col-md-8">
+					<button type="submit" class="btn btn-outline-danger" style="margin-top: 0.5em;">submit</button>
+				</div>
+				<div class="col-9 col-md-4" style="margin-top: 1em;"> 
+					<input type="checkbox" th:field="${homeDto.rememberPreferences}"/>
+					<label for="rememberPreferences1">Remember Preferences</label>
+				</div>
+			</div>
 
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-4">

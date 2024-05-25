@@ -10,7 +10,14 @@ public class HomeDto {
 	private Boolean cameraChemcam;
 	private Boolean cameraMahli;
 	private Boolean cameraMardi;
+	private Boolean rememberPreferences;
 	
+	public Boolean getRememberPreferences() {
+		return rememberPreferences;
+	}
+	public void setRememberPrefrences(Boolean rememberPreferences) {
+		this.rememberPreferences = rememberPreferences;
+	}
 	public Boolean getCameraFhaz() {
 		return cameraFhaz;
 	}
