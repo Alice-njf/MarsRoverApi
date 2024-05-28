@@ -28,7 +28,7 @@ highlightBtnRoverType (marsRoverType);
 console.log(marsRoverType);
 
 let marsSol = getUrlParameter('marsSol');
-if (marsSol != null && marsSol > 0) {
+if (marsSol != null && marsSol != '' && marsSol > 0) {
 	document.getElementById('marsSol').value = marsSol;
 }
 
