@@ -2,6 +2,7 @@ package com.alicenjf.dto;
 
 
 public class HomeDto {
+	private Long userId;
 	private String marsApiRoverData;
 	private Integer marsSol;
 	private Boolean cameraFhaz;
@@ -12,6 +13,16 @@ public class HomeDto {
 	private Boolean cameraMardi;
 	private Boolean rememberPreferences;
 	
+
+	public Long getUserId() {
+		return userId;
+	}
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+	public void setRememberPreferences(Boolean rememberPreferences) {
+		this.rememberPreferences = rememberPreferences;
+	}
 	public Boolean getRememberPreferences() {
 		return rememberPreferences;
 	}
@@ -89,5 +100,13 @@ public class HomeDto {
 		this.marsSol = marsSol;
 	}
 
+	@Override
+	public String toString() {
+		return "HomeDto [userId=" + userId + ", marsApiRoverData=" + marsApiRoverData + ", marsSol=" + marsSol
+				+ ", cameraFhaz=" + cameraFhaz + ", cameraRhaz=" + cameraRhaz + ", cameraMast=" + cameraMast
+				+ ", cameraChemcam=" + cameraChemcam + ", cameraMahli=" + cameraMahli + ", cameraMardi=" + cameraMardi
+				+ ", rememberPreferences=" + rememberPreferences + ", cameraNavcam=" + cameraNavcam + ", cameraPancam="
+				+ cameraPancam + ", cameraMinites=" + cameraMinites + "]";
+	}
 	
 }

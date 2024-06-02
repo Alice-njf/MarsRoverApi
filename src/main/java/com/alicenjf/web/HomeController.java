@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.thymeleaf.util.StringUtils;
 
@@ -41,19 +42,18 @@ public class HomeController {
 		return "index";
 	}
 	
-	@GetMapping("/test")
+	/*@GetMapping("/test")
 	public String getTest(ModelMap model) {
 		model.put("name", "Test");
 		model.put("address", "Test Adrress");
 		
 		return "index";
-	}
-	
-	/* @PostMapping("/")
-	public String postHomeView(ModelMap model, @RequestParam String marsApiRoverData) {
-		MarsRoverApiResponse roverData = roverService.getRoverData(marsApiRoverData);
-		model.put("roverData", roverData);
-		return "index";
-		
 	}*/
+	
+	@PostMapping("/")
+	public String postHomeView(HomeDto homeDto) {
+		System.out.println(homeDto);
+		return "redirect:/";
+		
+	}
 }
